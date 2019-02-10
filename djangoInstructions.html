@@ -1,0 +1,71 @@
+  <!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+      <title></title>
+      <style>
+        body{background-color:#261f16; color:#d37f0a;}
+        strong{color:goldenrod;}
+        hr{background-color: goldenrod;
+        height: 5px; border-radius: 2px;}
+        
+      </style>
+      
+    </head>
+    <body>
+    <div class='container'> 
+      <h1>Python virtual environment</h1>
+      <hr>
+      <p>
+        <strong>create --name <em>myEnv</em> django</strong>
+      </p>
+      <p>conda create --name <em>myEnv</em> python=3.7</p>
+      <p>activate <em>myEnv</em></p>
+      <p>deactivate <em>myEnv</em></p>
+      <p>conda info --envs  - list of all environments</p>
+      
+      <br>
+      <br>
+      
+      <h1>Django</h1>
+      <hr>
+      <p> 
+        <strong>django-admin statproject <em>first_project</em></strong>
+      </p>
+      
+      <p> <strong>python manage.py startapp <em>app_name</em></strong> <br>
+        in the project folder that was created by previous step<br>
+        after that we need to add the app into settings.py file in out project directory.
+      </p>
+      <p> <strong>python manage.py runserver</strong> <br>
+        starts the server
+      </p>    
+
+      <p>to add view we need to import HttpResponse from django.http than we need to create the function that will return the data that we need <br>
+      afther that we need to upen urls.py file from our project directory and import there views from out app and extend the urlpatterns by the path to our view's function/class/whatever  </p>
+
+      <p>We should create for every application the <em>url.py</em>file that allow as to manage application as it own part. And we will be passing it as string to the urls.py of our project</p>
+      <br><br>  
+      
+      <h2>Working with databases</h2>
+      <hr>
+      <p><strong>python manage.py migrate</strong><br>
+        first step
+      </p>
+      <p><strong>python manage.py makemigrations <em>app_name</em><br>
+      </strong>
+      secound step
+      </p>
+      <p><strong>python manage.py migrate</strong><br>
+        third step
+      </p>
+      <p><strong>python manage.py createsuperuser</strong><br>
+      creates superuser to mange the database. <br> name: pc1 <br>
+      pass: tutorial <br>
+      mail: pc1@pc1.com   </p>
+
+
+    </div>
+    </body>
+  </html>
